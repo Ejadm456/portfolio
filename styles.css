@@ -1,0 +1,272 @@
+/* Reset default browser spacing so the page layout is consistent. */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Dark palette is the default; components reference these with var(--name). */
+:root {
+  --bg-dark: oklch(0.1 0.03 264);
+  --bg: oklch(0.15 0.03 264);
+  --bg-light: oklch(0.2 0.03 264);
+  --text: oklch(0.96 0.06 264);
+  --text-muted: oklch(0.76 0.06 264);
+  --highlight: oklch(0.5 0.06 264);
+  --border: oklch(0.4 0.06 264);
+  --border-muted: oklch(0.3 0.06 264);
+  --primary: oklch(0.76 0.1 264);
+  --secondary: oklch(0.76 0.1 84);
+  --danger: oklch(0.7 0.06 30);
+  --warning: oklch(0.7 0.06 100);
+  --success: oklch(0.7 0.06 160);
+  --info: oklch(0.7 0.06 260);
+}
+
+/* Replace the palette when the browser or OS is set to light mode. */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-dark: oklch(0.92 0.03 264);
+    --bg: oklch(0.96 0.03 264);
+    --bg-light: oklch(1 0.03 264);
+    --text: oklch(0.15 0.06 264);
+    --text-muted: oklch(0.4 0.06 264);
+    --highlight: oklch(1 0.06 264);
+    --border: oklch(0.6 0.06 264);
+    --border-muted: oklch(0.7 0.06 264);
+    --primary: oklch(0.4 0.1 264);
+    --secondary: oklch(0.4 0.1 84);
+    --danger: oklch(0.5 0.06 30);
+    --warning: oklch(0.5 0.06 100);
+    --success: oklch(0.5 0.06 160);
+    --info: oklch(0.5 0.06 260);
+  }
+
+  /* Use a light-mode hover treatment for navigation links. */
+  nav a:hover {
+    background-color: var(--bg-dark);
+    color: var(--text);
+    border-radius: 5px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  /* Use a dark-mode hover treatment for navigation links. */
+  nav a:hover {
+    background-color: var(--primary);
+    color: var(--bg);
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Make the contact form fields and button full width on small screens. */
+  #name,
+  #email,
+  #message,
+  #submit {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Make the page fill the viewport and let the main content grow. */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text);
+  min-height: 100vh;
+  margin: 0;
+}
+
+body > div {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Keep the footer below the main content on short pages. */
+main {
+  flex: 1;
+}
+
+/* Header and navigation use the shared color palette. */
+header {
+  background-color: var(--bg-dark);
+  padding: 20px;
+  text-align: center;
+}
+
+nav {
+  background-color: var(--bg);
+  padding: 10px;
+  display: flex;
+  /*justify-content: center;*/
+}
+
+.menu-toggle {
+  display: none;
+}
+
+/* Lay out navigation links in a horizontal row with consistent spacing. */
+nav ul {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+}
+
+nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+@media (max-width: 599.98px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .menu-toggle {
+    display: block;
+    color: var(--text);
+    background: transparent;
+    border: 0;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  nav ul.is-open {
+    display: flex;
+  }
+}
+
+/* Center the landing/contact sections and space out content pages. */
+#index,
+#contact {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+/* Give the project and about sections room around their content. */
+#projects,
+#about {
+  flex: 1;
+  padding: 20px;
+  font-size: 1.5em;
+}
+
+/* Style the project list and descriptions. */
+#project-list {
+  list-style: numbered;
+  padding: 10px;
+  margin-left: 30px;
+  color: var(--text);
+}
+
+.project-description {
+  margin-top: 5px;
+  margin-bottom: 15px;
+  font-size: 0.9em;
+  color: var(--text-muted);
+}
+
+.project-description a {
+  color: var(--primary);
+}
+
+.project-description a:hover {
+  color: var(--secondary);
+}
+
+#about p {
+  margin: 20px;
+}
+
+/* Add breathing room to list items across the pages. */
+li {
+  padding: 10px;
+}
+
+#contact-message {
+  margin: 20px;
+  font-size: 1.2em;
+  color: var(--text);
+}
+
+/* Match the contact fields to the active color palette. */
+#name,
+#email {
+  width: 300px;
+  padding: 10px;
+  margin: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--text);
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+}
+
+#message {
+  width: 300px;
+  height: 100px;
+  padding: 10px;
+  margin: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--text);
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  resize: none;
+}
+
+/* Make the submit button stand out and indicate that it is clickable. */
+#submit {
+  width: 150px;
+  padding: 10px 20px;
+  margin: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--bg);
+  background-color: var(--primary);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#submit:hover {
+  background-color: var(--secondary);
+}
+
+#info {
+  margin-top: 10px;
+  color: var(--success);
+  font-size: 0.8em;
+}
+
+/* Keep the footer at the bottom and visually separate it from the page. */
+footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--bg-dark);
+  padding: 20px;
+  text-align: center;
+  color: var(--text-muted);
+  margin-top: auto;
+  width: 100%;
+}

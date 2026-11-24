@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Document metadata and shared stylesheet. -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <div id="container_projects">
+      <!-- Shared page heading. -->
+      <header>
+        <h1>Projects</h1>
+      </header>
+      <!-- Navigation links to the portfolio pages. -->
+      <nav>
+        <button type="button" class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-nav">☰</button>
+        <ul id="main-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- Project summaries and related links. -->
+      <main id="projects">
+        <p>Here are some of the projects I've worked on:</p>
+        <ul id="project-list">
+          <li>Local AI voice agent</li>
+          <p class="project-description">
+            A local AI voice agent that can perform various tasks and answer
+            questions.
+          </p>
+          <p class="project-description">
+            Still in development but already proving to be useful.
+          </p>
+
+          <li>Usb rubber ducky clone</li>
+          <p class="project-description">
+            A more versatile clone of the popular
+            <a href="https://shop.hak5.org/products/usb-rubber-ducky" target="_blank">USB rubber ducky</a>
+            keyboard emulator.
+          </p>
+
+          <li>Python hashcat clone</li>
+          <p class="project-description">
+            A python implementation of the password cracking tool
+            <a href="https://hashcat.net/" target="_blank">hashcat</a> used by
+            cybersecurity professionals.
+          </p>
+
+          <li>Health tracking sticker</li>
+          <p class="project-description">
+            A complete package including a wearable sticker, phone app, and a cloud service that can monitor vital signs and alert the user to potential health issues like a smart ring. 
+          </p>
+          <p class="project-description">
+            My latest project, I started it few months ago and is currently in the hardware design phase.
+          </p>
+        </ul>
+      </main>
+      <!-- Shared copyright notice. -->
+      <footer>
+        <p>&copy; 2026 Adam Kravčík. All rights reserved.</p>
+      </footer>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
