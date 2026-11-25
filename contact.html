@@ -1,43 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <!-- Document metadata and shared stylesheet. -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <title>Portfolio</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="container_contact">
-        <!-- Shared page heading. -->
-        <header>
-            <h1>Contact Me</h1>
-        </header>
-        <!-- Navigation links to the portfolio pages. -->
-        <nav>
-            <button type="button" class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-nav">☰</button>
-            <ul id="main-nav">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <!-- Contact form and its status message. -->
-        <main id="contact">
-            <p id="contact-message">Feel free to reach out to me!</p>
-            <input type="text" placeholder="Your Name" id="name">
-            <input type="email" placeholder="Your Email" id="email">
-            <textarea placeholder="Your Message" id="message"></textarea>
-            <button type="submit" id="submit" onclick="sendEmail()">Send</button>
-            <p id="info"></p>
-        </main>
-        <!-- Shared copyright notice. -->
-        <footer>
-            <p>&copy; 2026 Adam Kravčík. All rights reserved.</p>
-        </footer>
+      <!-- Navigation links to the portfolio pages. -->
+      <nav>
+        <button
+          type="button"
+          class="menu-toggle"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          ☰
+        </button>
+        <ul id="main-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- Contact form and its status message. -->
+      <main id="contact">
+        <div id="contact-intro">
+            <h2 id="contact-message">Feel free to reach out to me!</h2>
+        </div>
+        <input type="text" placeholder="Your Name" id="name" />
+        <input type="email" placeholder="Your Email" id="email" />
+        <textarea placeholder="Your Message" id="message"></textarea>
+        <button type="submit" id="submit" onclick="sendEmail()">Send</button>
+        <p id="info"></p>
+      </main>
+      <!-- Shared copyright notice. -->
+      <footer>
+        <p>&copy; 2026 Adam Kravčík. All rights reserved.</p>
+      </footer>
     </div>
     <!-- Loads the contact form's client-side behavior. -->
     <script src="./script.js"></script>
-</body>
+  </body>
 </html>

@@ -5,17 +5,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <title>Portfolio</title>
   </head>
   <body>
     <div id="container_projects">
-      <!-- Shared page heading. -->
-      <header>
-        <h1>Projects</h1>
-      </header>
       <!-- Navigation links to the portfolio pages. -->
       <nav>
-        <button type="button" class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-nav">☰</button>
+        <button
+          type="button"
+          class="menu-toggle"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          ☰
+        </button>
         <ul id="main-nav">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Me</a></li>
@@ -25,7 +35,9 @@
       </nav>
       <!-- Project summaries and related links. -->
       <main id="projects">
-        <p id="projects-intro">Here are some of the projects I've worked on:</p>
+        <div id="projects-intro">
+          <h2>Here are some of my personal projects:</h2>
+        </div>
         <section class="project-section">
           <h3>Local AI voice agent</h3>
           <p class="project-description">
@@ -35,38 +47,80 @@
           <p class="project-description">
             Still in development but already proving to be useful.
           </p>
-          <button type="button" class="project-button" onclick="window.open('https://github.com/Ejadm456/F.R.I.D.A.Y', '_blank')">➔</button>
-          </section>
+          <button
+            type="button"
+            class="project-button"
+            onclick="
+              window.open('https://github.com/Ejadm456/F.R.I.D.A.Y', '_blank')
+            "
+          >
+            ➔
+          </button>
+        </section>
 
-          <section class="project-section">
+        <section class="project-section">
           <h3>Usb rubber ducky clone</h3>
           <p class="project-description">
             A more versatile clone of the popular
-            <a href="https://shop.hak5.org/products/usb-rubber-ducky" target="_blank">USB rubber ducky</a>
+            <a
+              href="https://shop.hak5.org/products/usb-rubber-ducky"
+              target="_blank"
+              >USB rubber ducky</a
+            >
             keyboard emulator.
           </p>
-          <button type="button" class="project-button" onclick="window.open('https://github.com/Ejadm456/Malduino-clone', '_blank')">➔</button>
-          </section>
+          <button
+            type="button"
+            class="project-button"
+            onclick="
+              window.open(
+                'https://github.com/Ejadm456/Malduino-clone',
+                '_blank',
+              )
+            "
+          >
+            ➔
+          </button>
+        </section>
 
-          <section class="project-section">
+        <section class="project-section">
           <h3>Python hashcat clone</h3>
           <p class="project-description">
             A python implementation of the password cracking tool
             <a href="https://hashcat.net/" target="_blank">hashcat</a> used by
             cybersecurity professionals.
           </p>
-          <button type="button" class="project-button" onclick="window.open('https://github.com/Ejadm456/hashcat-clone', '_blank')">➔</button>
-          </section>
+          <button
+            type="button"
+            class="project-button"
+            onclick="
+              window.open('https://github.com/Ejadm456/hashcat-clone', '_blank')
+            "
+          >
+            ➔
+          </button>
+        </section>
 
-          <section class="project-section">
+        <section class="project-section">
           <h3>Health tracking sticker</h3>
           <p class="project-description">
-            A complete package including a wearable sticker, phone app, and a cloud service that can monitor vital signs and alert the user to potential health issues like a smart ring. 
+            A complete package including a wearable sticker, phone app, and a
+            cloud service that can monitor vital signs and alert the user to
+            potential health issues like a smart ring.
           </p>
           <p class="project-description">
-            My latest project, I started it few months ago and is currently in the hardware design phase.
+            My latest project, I started it few months ago and is currently in
+            the hardware design phase.
           </p>
-          <button type="button" class="project-button" onclick="window.open('https://github.com/Ejadm456/Health-chip', '_blank')">➔</button>
+          <button
+            type="button"
+            class="project-button"
+            onclick="
+              window.open('https://github.com/Ejadm456/Health-chip', '_blank')
+            "
+          >
+            ➔
+          </button>
         </section>
       </main>
       <!-- Shared copyright notice. -->

@@ -5,14 +5,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <title>Portfolio</title>
   </head>
   <body>
     <div id="container_about">
-      <!-- Shared page heading. -->
-      <header>
-        <h1>About Me</h1>
-      </header>
       <!-- Navigation links to the portfolio pages. -->
       <nav>
         <button
@@ -33,57 +35,149 @@
       </nav>
       <!-- About page biography and skills. -->
       <main id="about">
-        <section class="about-section">
-          <h4>Biography</h4>
-        <p>
-          I'm a student developer passionate about building solutions through
-          code.
-        </p>
-        <p>
-          This portfolio showcases my projects, particularly focusing on Python,
-          Embedded Systems
-          and
-          <a class="tech-link" href="https://developer.mozilla.org/en-US/docs/Learn_web_development" target="_blank" rel="noopener noreferrer">Web Development</a>.
-        </p>
-        </section>
+        <div id="about-intro">
+          <h2>Someting about me!</h2>
+        </div>
+        <div class="about-row image-right">
+          <section class="about-section">
+            <h4>Biography</h4>
+            <p>
+              I'm in my sophomore year at Secondary School of Electrical
+              Engineering in Prešov studying
+              <a
+                href="https://www.britannica.com/science/computer-science"
+                class="tech-link"
+                target="_blank"
+                >Computer Science</a
+              >.
+            </p>
+            <p>
+              This portfolio showcases my projects, particularly focusing on
+              Python, Embedded Systems and
+              <a
+                class="tech-link"
+                href="https://developer.mozilla.org/en-US/docs/Learn_web_development"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Web Development</a
+              >.
+            </p>
+          </section>
+          <img
+            src="./img/code.png"
+            alt="Code on a computer screen"
+            id="code-image"
+          />
+        </div>
 
-        <section class="about-section">
-          <h4>Skills</h4>
-        <p>
-          I am currently learning
-          <a class="tech-link" href="https://react.dev/learn" target="_blank" rel="noopener noreferrer">React</a>,
-          <a class="tech-link" href="https://www.postgresql.org/docs/" target="_blank" rel="noopener noreferrer">SQL</a>
-          and
-          <a class="tech-link" href="https://docs.kernel.org/" target="_blank" rel="noopener noreferrer">Linux</a>
-          to expand my programming skills and knowledge.
-        </p>
-        <p>
-          My current skills include
-          <a class="tech-link" href="https://docs.python.org/" target="_blank" rel="noopener noreferrer">Python</a>,
-          <a class="tech-link" href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer">HTML</a>,
-          <a class="tech-link" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener noreferrer">CSS</a>,
-          and a little bit of
-          <a class="tech-link" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer">JavaScript</a>.
-          I'm also familiar with
-          <a class="tech-link" href="https://git-scm.com/doc" target="_blank" rel="noopener noreferrer">Git</a>
-          and basics of
-          networking.
-        </p>
-        </section>
+        <div class="about-row image-left">
+          <section class="about-section">
+            <h4>Skills</h4>
+            <p>
+              I am currently learning
+              <a
+                class="tech-link"
+                href="https://react.dev/learn"
+                target="_blank"
+                rel="noopener noreferrer"
+                >React</a
+              >,
+              <a
+                class="tech-link"
+                href="https://www.postgresql.org/docs/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >SQL</a
+              >
+              and
+              <a
+                class="tech-link"
+                href="https://docs.kernel.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Linux</a
+              >
+              to expand my programming skills and knowledge.
+            </p>
+            <p>
+              My current skills include
+              <a
+                class="tech-link"
+                href="https://docs.python.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Python</a
+              >,
+              <a
+                class="tech-link"
+                href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+                target="_blank"
+                rel="noopener noreferrer"
+                >HTML</a
+              >,
+              <a
+                class="tech-link"
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+                target="_blank"
+                rel="noopener noreferrer"
+                >CSS</a
+              >, and a little bit of
+              <a
+                class="tech-link"
+                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+                target="_blank"
+                rel="noopener noreferrer"
+                >JavaScript</a
+              >. I'm also familiar with
+              <a
+                class="tech-link"
+                href="https://git-scm.com/doc"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Git</a
+              >
+              and basics of networking.
+            </p>
+          </section>
+          <img
+            src="./img/python.png"
+            alt="Python programming language logo"
+            id="python-image"
+          />
+        </div>
 
-        <section class="about-section">
-          <h4>Interests</h4>
-        <p>
-          In my free time, I also love to play sports, watch movies, and listen to music.
-        </p>
-        <p>
-          I am also interested in
-          cybersecurity
-          and
-          ethical hacking
-          , and I enjoy learning about new technologies and programming languages.
-        </p>
-        </section>
+        <div class="about-row image-right">
+          <section class="about-section">
+            <h4>Interests</h4>
+            <p>
+              In my free time, I also love to play sports, watch movies, and
+              listen to music.
+            </p>
+            <p>
+              I am also interested in
+              <a
+                href="https://www.ibm.com/think/topics/cybersecurity"
+                class="tech-link"
+                target="_blank"
+                >cybersecurity</a
+              >
+              and
+              <a
+                href="https://www.ibm.com/think/topics/ethical-hacking"
+                class="tech-link"
+                target="_blank"
+                >ethical hacking</a
+              >
+              , and I enjoy learning about new technologies and programming
+              languages.
+            </p>
+          </section>
+          <img
+            src="./img/volleyball.png"
+            alt="Volleyball"
+            id="volleyball-image"
+          />
+        </div>
       </main>
       <!-- Shared copyright notice. -->
       <footer>
